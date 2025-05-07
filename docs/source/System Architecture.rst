@@ -15,6 +15,7 @@ Each screen is comprised of between 1 and 3 objects, depending on the nature of 
 Screens which do not store state are comprised primarily of 1 object,
 which extends the ``StatelessWidget`` class. 
 Such screens include:
+
 - ``LogInScreen`` in ``log_in.dart``
 
 - ``ProfileScreen`` in ``profile.dart``
@@ -30,6 +31,7 @@ Screens which store state are primarily comprised of 2 objects.
 The first extends the ``StatefulWidget`` class, and the second extends the ``State<ScreenName>`` class 
 (where ``ScreenName`` is the name of that screen's first object.) 
 Such screens include:
+
 - ``AddTaskScreen`` in ``add_task.dart``
 
 - ``CategoryRankingScreen`` in ``category_ranking.dart``
@@ -46,6 +48,8 @@ Such screens include:
 
 Some screens also have an additional object to implement a navigation bar (NavBar).
 
+TODO some discussion of how flutter state management works + some discussion on how to change between screens.
+
 
 ******
 Business Logic Layer
@@ -53,10 +57,16 @@ Business Logic Layer
 
 The business logic is handled by several "managers". 
 These include an ``AccountManager``, a ``ScheduleManager``, an ``AlarmManager``, a ``NotificationManager`` and a ``PointsManager``. 
+The code for these can be found in ``lib/Components``. 
 
 The ``AccountManager`` and ``ScheduleManager``, being particularly complex, are divided across several files. 
 These managers are defined by an interface, which specifies the methods they provide. 
 This simplifies development as it provides a consistent API to be used by the presentation layer.
 
-TODO: TOC for this page
 TODO: Breakdown of functionality / interaction of these different managers?
+
+
+******
+Database Layer
+******
+
