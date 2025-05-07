@@ -51,7 +51,7 @@ Such screens include:
 
 Some screens also have an additional object to implement a navigation bar (NavBar).
 
-More information about the GUI on the `app flow`_ page.
+More information about the GUI on the `App Flow and Features`_ page.
 
 ******
 Business Logic Layer
