@@ -10,9 +10,9 @@ This section works through the user experience of the 75-student app as well hig
 
 Users begin by either creating an account or logging in. This ensures that individual habits and progress are saved.
 
-Sign up - The sign up page requires user details such as fullname, email, username and password.
+**Sign up** - The sign up page requires user details such as fullname, email, username and password.
 
-Log in - Once the user have successfully signed up, the user can login using their username/email and password.
+**Log in** - Once the user have successfully signed up, the user can login using their username/email and password.
 
 ********************
 2. Select Difficulty
