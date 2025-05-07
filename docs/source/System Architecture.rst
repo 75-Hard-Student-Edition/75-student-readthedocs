@@ -4,9 +4,9 @@ System Architecture
 
 The app has a 3-layer architecture. (Presentation Layer, Business Logic Layer, Database Layer)
 
-******
+******************
 Presentation Layer
-******
+******************
 This code deals with displaying the GUI and handling user input. 
 Where the user actions may require some kind of data processing, 
 the code in this layer will call methods implemented by the business logic layer.
@@ -53,9 +53,9 @@ Some screens also have an additional object to implement a navigation bar (NavBa
 
 More information about the GUI on the :ref:`App Flow and Features` page.
 
-******
+********************
 Business Logic Layer
-******
+********************
 This code deals with processing data. 
 It implements several methods which may be called by the presentation layer.
 When data needs to be permanently stored or retrieved, 
@@ -82,9 +82,9 @@ This simplifies development as it provides a consistent API to be used by the pr
 
 TODO: Breakdown of functionality / interaction of these different managers?
 
-******
+**************
 Database Layer
-******
+**************
 This code (found in ``lib/database``) deals with the storage, retrieval and updating of data in the database. 
 It implements several methods which may be called by the business logic layer. 
 TODO expand what methods exactly. Also for other layers expand what methods exactly.
