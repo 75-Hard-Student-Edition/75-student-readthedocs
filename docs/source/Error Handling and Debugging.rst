@@ -25,21 +25,21 @@ Caught exceptions should be handled quietly, without crashing the app.
 
 **Example:**
 .. code-block:: dart
-onPressed: () async {
-                      // Log in to the account using the AccountManager
-                      try {
-                        await widget.accountManager.login(
-                          _usernameController.text,
-                          _passwordController.text,
-                        );
-                      } on AccountNotFoundException catch (e) {
-                        // Handle login error (e.g., show a dialog or snackbar)
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text('Login failed: $e'),
-                            backgroundColor: Colors.red,
-                          ),
-                        );
-                        return;
-                      }
-```
+    onPressed: () async {
+                        // Log in to the account using the AccountManager
+                        try {
+                            await widget.accountManager.login(
+                            _usernameController.text,
+                            _passwordController.text,
+                            );
+                        } on AccountNotFoundException catch (e) {
+                            // Handle login error (e.g., show a dialog or snackbar)
+                            ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                                content: Text('Login failed: $e'),
+                                backgroundColor: Colors.red,
+                            ),
+                            );
+                            return;
+                        }
+
