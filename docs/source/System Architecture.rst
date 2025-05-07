@@ -2,14 +2,17 @@ System Architecture
 ===================
 .. note:: This page is currently under development. Please check back later for updates.
 
-The app has a 3-layer architecture. 
+The app has a 3-layer architecture. (Presentation Layer, Business Logic Layer, Database Layer)
 
 ******
 Presentation Layer
 ******
-The GUI is comprised of a collection of "screens" (occasionally "page" is used synomously). 
-The code for each screen is written in its own file in ``lib/userInterfaces``.
+This code deals with displaying the GUI and handling user input. 
+Where the user actions may require some kind of data processing, 
+the code in this layer will call methods implemented by the business logic layer.
 
+The GUI is comprised of a collection of "screens" (occasionally "page" is used synomously). 
+The code for each screen is written in its own file in ``lib/userInterfaces``. 
 Each screen is comprised of between 1 and 3 objects, depending on the nature of the screen. 
 
 Screens which do not store state are comprised primarily of 1 object,
@@ -48,15 +51,29 @@ Such screens include:
 
 Some screens also have an additional object to implement a navigation bar (NavBar).
 
-TODO some discussion of how flutter state management works + some discussion on how to change between screens.
-
+More information about the GUI on the `app flow`_ page.
 
 ******
 Business Logic Layer
 ******
+This code deals with processing data. 
+It implements several methods which may be called by the presentation layer.
+When data needs to be permanently stored or retrieved, 
+the code in this layer will call methods implemented by the database layer.
 
-The business logic is handled by several "managers". 
-These include an ``AccountManager``, a ``ScheduleManager``, an ``AlarmManager``, a ``NotificationManager`` and a ``PointsManager``. 
+The business logic is primarily handled by several **managers**.
+These include:
+
+- ``AccountManager``
+
+- ``ScheduleManager``
+
+- ``AlarmManager``
+
+- ``NotificationManager``
+
+- ``PointsManager``. 
+
 The code for these can be found in ``lib/Components``. 
 
 The ``AccountManager`` and ``ScheduleManager``, being particularly complex, are divided across several files. 
@@ -65,8 +82,13 @@ This simplifies development as it provides a consistent API to be used by the pr
 
 TODO: Breakdown of functionality / interaction of these different managers?
 
-
 ******
 Database Layer
 ******
+This code (found in ``lib/database``) deals with the storage, retrieval and updating of data in the database. 
+It implements several methods which may be called by the business logic layer. 
+TODO expand what methods exactly. Also for other layers expand what methods exactly.
+
+The database is implemented using SQLite and the flutter package for handling SQLite, ``sqflite``. 
+Another package, ``sqflite_darwin`` is needed to ensure compatibility with iOS systems.
 
