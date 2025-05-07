@@ -5,7 +5,9 @@ This document outlines the standard practice for error handling and debugging wi
 
 Error Handling
 --------------
+
 Use try-catch blocks to handle exceptions, especially for user input operations such as:
+
 *   Moving a task to overlap on another task
 *   Loging into an account that doesn't exist
 *   Deleting a task that doesn't exist
@@ -13,7 +15,9 @@ Use try-catch blocks to handle exceptions, especially for user input operations 
 Caught exceptions should be handled quietly, without crashing the app.
 
 **Custom exceptions:**
+
 *   Whenever possible, define custom exceptions for specific error scenarios.
+
 .. code-block:: dart
 
     class AccountNotFoundException implements Exception {
