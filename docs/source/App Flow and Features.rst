@@ -4,7 +4,9 @@ App Flow and Features
 
 This section works through the user experience of the 75-student app as well highlights its core fatures.
 
-## 1. Sign Up / Log In 
+*******************
+1. Sign Up / Log In 
+*******************
 
 Users begin by either creating an account or loggin in. This ensures that individual habits and progress are saved.
 
@@ -12,7 +14,9 @@ Sign up - The sign up page requires user details such as fullname, email, userna
 
 Log in - Once the user have successfully signed up, the user can login using their username/email and password.
 
-## 2. Select Diffculty
+*******************
+2. Select Diffculty
+*******************
 
 Once successfully signed in, the user can choose between three diffculty levels.
 
@@ -22,7 +26,9 @@ Once successfully signed in, the user can choose between three diffculty levels.
 
 - hard.
 
-## 3. Order categories
+*******************
+3. Order categories
+*******************
 
 Users can prioritize their focus areas by ranking six predefined categories in order of significance.
 
@@ -42,11 +48,15 @@ Users can prioritize their focus areas by ranking six predefined categories in o
 
 This is done using an inbult flutter drag and drop widget.
 
-## 4. Notifcations 
+***************
+4. Notifcations 
+***************
 
 Users are then taken to the Notifcations page, where they can enable and disable notifications as well as set 'reminder time'.
 
-## 5. Calendar View
+****************
+5. Calendar View
+****************
 
 This view displays each habit as a time-based block in a daily timeline layout, aligned with the preferred time the habit is meant to be completed.
 
@@ -60,7 +70,9 @@ Edit habit details and time.
 
 View habit history for past completion records.
 
-## 6. Add Task View
+****************
+6. Add Task View
+****************
 
 This view enables users to add task to their schedule. Users set the following on this page.
 
@@ -79,7 +91,9 @@ This view enables users to add task to their schedule. Users set the following o
 - Links
 
 
-## 7. My Profile View
+******************
+7. My Profile View
+******************
 
 Accessible from the Calendar view, the Profile page displays personalized user data:
 
@@ -87,8 +101,9 @@ Shows earned badges based on user progress.
 
 Displays the difficulty level selected by the user.
 
-
-## 8. Mindfulness Page
+*******************
+8. Mindfulness Page
+*******************
 
 Users can access the Mindfulness page to practice guided breathing exercises.
 
