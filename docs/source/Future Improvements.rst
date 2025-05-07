@@ -20,8 +20,7 @@ Account Management
 Task Management
 ***************
 
-- A mechanism by which the app detects a day has passed
-in order to generate the next day's schedule
+- A mechanism by which the app detects a day has passed in order to generate the next day's schedule
 
 - A summary of the next day's schedule
 
@@ -49,7 +48,7 @@ Alarms
 
 - Different alarm for each day of the week
 
-- Option to enforce some kind of customisable interaction to disable alarm e.g.
+- Option to enforce some kind of customisable interaction to disable alarm e.g:
 
   - Math equation
 
@@ -63,12 +62,9 @@ Alarms
 Reminders
 *********
 
-- Allow creation of arbitrary reminders with attributes including title, description,
-date, time, and optional notes
+- Allow creation of arbitrary reminders with attributes including title, description, date, time, and optional notes
 
-- Allow users to postpone reminders (with a "Remind Me Later") button
-such that the reminder can be rescheduled from a selection of predefined intervals
-(e.g. 5, 10, 15, 30 mins, 1, 2, 3 hours etc.)
+- Allow users to postpone reminders (with a "Remind Me Later") button such that the reminder can be rescheduled from a selection of predefined intervals (e.g. 5, 10, 15, 30 mins, 1, 2, 3 hours etc.)
 
 - Automatic reminders (notifications) for tasks or imported calendar events
 
@@ -99,8 +95,7 @@ Habits
 Sleep
 *****
 
-- Allow user to log sleep duration by pressing a button to start timer
-and ending timer when morning alarm goes off
+- Allow user to log sleep duration by pressing a button to start timer and ending timer when morning alarm goes off
 
 - Visualise sleep duration over time
 
@@ -108,8 +103,6 @@ and ending timer when morning alarm goes off
 App Blocking
 ************
 
-- Allow users to "block" different apps. This entails setting time limits
-on their usage, and notifying the user when the allotted time has passed
+- Allow users to "block" different apps. This entails setting time limits on their usage, and notifying the user when the allotted time has passed
 
-- Alternatively an app can be blocked after a certain time in the day 
-(to encourage users to not use their phone excessively before bed)
+- Alternatively an app can be blocked after a certain time in the day  (to encourage users to not use their phone excessively before bed)
