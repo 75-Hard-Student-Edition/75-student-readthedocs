@@ -30,6 +30,7 @@ templates_path = ['_templates']
 
 html_theme = 'sphinx_rtd_theme'
 html_search_language = 'en'
+html_search_options = {'type' : 'default'}
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
