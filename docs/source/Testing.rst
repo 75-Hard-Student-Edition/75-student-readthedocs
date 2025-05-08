@@ -7,7 +7,7 @@ Automated Testing
 *****************
 
 This project has a suite of automated unit tests, written in the ``test`` directory. 
-These automated tests are written using the :ref:`flutter_test` or :ref:`test` packages. 
+These automated tests are written using the `flutter_test`_ or `test`_ packages. 
 The `mocktail`_ package is also used to create mocks. 
 
 There is unfortunately no continuous integration, however the test files can be run 
