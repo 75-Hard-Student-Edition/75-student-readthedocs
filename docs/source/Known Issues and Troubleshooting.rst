@@ -1,4 +1,5 @@
 .. _known issues:
+
 Known Issues and Troubleshooting
 ================================
 .. note:: This page is currently under development. Please check back later for updates.
@@ -29,3 +30,4 @@ there is no mechanism in place to detect a change of day
 8. Sensitive data (i.e. passwords) is unencrypted. 
 
 TODO elaborate on "Troubleshooting" part
+
