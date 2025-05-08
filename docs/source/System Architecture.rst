@@ -5,6 +5,7 @@ System Architecture
 The app has a 3-layer architecture. (Presentation Layer, Business Logic Layer, Database Layer)
 
 ******************
+******************
 Presentation Layer
 ******************
 This code deals with displaying the GUI and handling user input. 
@@ -53,6 +54,7 @@ Some screens also have an additional object to implement a navigation bar (NavBa
 
 More information about the GUI on the :ref:`App Flow and Features` page.
 
+********************
 ********************
 Business Logic Layer
 ********************
