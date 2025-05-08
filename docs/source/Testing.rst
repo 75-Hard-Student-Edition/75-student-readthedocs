@@ -26,7 +26,7 @@ System Testing
 
 During development thus far, manual system testing has also been used to test
 compliance with the system requirements (or identify those areas in which the system fails). 
-This testing has identified a number of issues with the system, which can be found in 
-the :ref:`known issues` file.
+This testing has identified a number of issues with the system, which can be found on 
+the :ref:`known issues` page.
 
 There are no manual test cases.
