@@ -43,5 +43,3 @@ It uses callback functions for UI interaction such as
 
 The app uses manual, class-based internal state management, where each manager class maintains its own internal state 
 and exposes methods to mutate or retrieve that state.
-
-

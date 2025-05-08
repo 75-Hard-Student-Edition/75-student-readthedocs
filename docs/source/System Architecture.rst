@@ -4,9 +4,9 @@ System Architecture
 
 The app has a 3-layer architecture. 
 
-******
+******************
 Presentation Layer
-******
+******************
 The GUI is comprised of a collection of "screens" (occasionally "page" is used synomously). 
 The code for each screen is written in its own file in ``lib/userInterfaces``.
 
@@ -47,9 +47,9 @@ Such screens include:
 Some screens also have an additional object to implement a navigation bar (NavBar).
 
 
-******
+********************
 Business Logic Layer
-******
+********************
 
 The business logic is handled by several "managers". 
 These include an ``AccountManager``, a ``ScheduleManager``, an ``AlarmManager``, a ``NotificationManager`` and a ``PointsManager``. 
