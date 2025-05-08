@@ -1,5 +1,5 @@
 Future Improvements 
-====================
+===================
 .. note:: This page is currently under development. Please check back later for updates.
 
 This is a list of future improvements which we believe should take priority
@@ -39,24 +39,6 @@ Task Management
 - Pie chart visualisation of how time is split between tasks of different categories
 
 - The ability to view task completion statistics over various time periods (day, week, month)
-
-******
-Alarms
-******
-
-- Customisable alarm tones: either from a default library or user uploaded
-
-- Different alarm for each day of the week
-
-- Option to enforce some kind of customisable interaction to disable alarm e.g:
-
-  - Math equation
-
-  - Puzzle
-
-  - Pattern matching
-
-- An "Emergency Override" to bypass aforementioned interactions
 
 *********
 Reminders
