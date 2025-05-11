@@ -57,7 +57,7 @@ These include an ``AccountManager``, a ``ScheduleManager``, an ``AlarmManager``,
 These managers expose interfaces to the presentation and database layers to use, allowing them to manipulate the internal state of the app, as well as the persistent data in the database.
 This approach simplifies development and testing as it provides a consistent API to be used by the presentation layer.
 
-A more detailed breakdown on how each of the managers works is provided in the `State Management`_ section, however here is an example of the ScheduleManager interface:
+A more detailed breakdown on how each of the managers works is provided in the :doc:`State Management` section, however here is an example of the ScheduleManager interface:
 
 .. code-block:: dart
 
@@ -81,6 +81,3 @@ A more detailed breakdown on how each of the managers works is provided in the `
     // ScheduleManager -> ScheduleGenerator methods
     AccountManager get accManager;
     }
-
-
-.. _`State Management`: State%20Management.rst
