@@ -1,6 +1,5 @@
 System Architecture
 ===================
-.. note:: This page is currently under development. Please check back later for updates.
 
 The app has a 3-layer architecture. 
 
@@ -15,7 +14,6 @@ Each screen is comprised of between 1 and 3 objects, depending on the nature of 
 Screens which do not store state are comprised primarily of 1 object,
 which extends the ``StatelessWidget`` class. 
 Such screens include:
-- ``LogInScreen`` in ``log_in.dart``
 
 - ``ProfileScreen`` in ``profile.dart``
 
@@ -44,6 +42,8 @@ Such screens include:
 
 - ``SignUpScreen`` in ``sign_up.dart``
 
+-  ``LoginScreen`` in ``login.dart``
+
 Some screens also have an additional object to implement a navigation bar (NavBar).
 
 
@@ -54,9 +54,33 @@ Business Logic Layer
 The business logic is handled by several "managers". 
 These include an ``AccountManager``, a ``ScheduleManager``, an ``AlarmManager``, a ``NotificationManager`` and a ``PointsManager``. 
 
-The ``AccountManager`` and ``ScheduleManager``, being particularly complex, are divided across several files. 
-These managers are defined by an interface, which specifies the methods they provide. 
-This simplifies development as it provides a consistent API to be used by the presentation layer.
+These managers expose interfaces to the presentation and database layers to use, allowing them to manipulate the internal state of the app, as well as the persistent data in the database.
+This approach simplifies development and testing as it provides a consistent API to be used by the presentation layer.
 
-TODO: TOC for this page
-TODO: Breakdown of functionality / interaction of these different managers?
+A more detailed breakdown on how each of the managers works is provided in the `State Management`_ section, however here is an example of the ScheduleManager interface:
+
+.. code-block:: dart
+
+    abstract class IScheduleManager {
+    // ScheduleManager -> GUI methods
+    Schedule get schedule;
+    List<TaskModel> getBacklogSuggestions();
+    Future<TaskModel?> userBinarySelect(TaskModel task1, TaskModel task2, String message);
+    void displayError(String message);
+
+    // GUI -> ScheduleManager methods
+    void addTask(TaskModel task);
+    void deleteTask(int taskId);
+    void editTask(TaskModel task);
+    void postPoneTask(int taskId);
+    void completeTask(int taskId);
+    void uncompleteTask(int taskId);
+    void scheduleBacklogSuggestion(int taskId);
+    DateTime? findAvailableTimeSlot(TaskModel task);
+
+    // ScheduleManager -> ScheduleGenerator methods
+    AccountManager get accManager;
+    }
+
+
+.. _`State Management`: docs/source/State%20Management.rst
