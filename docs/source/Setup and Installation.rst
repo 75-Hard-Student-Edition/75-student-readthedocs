@@ -5,7 +5,7 @@ This app does not have any official releases. To run the app, download the sourc
 
 The source code for the app can be cloned from the `github repository`_.
 
-The dependencies are listed in the ``pubspec.yaml`` file:
+The dependencies are listed in the ``pubspec.yaml`` file:  
 
 .. code-block:: yaml
     version: 1.0.0+1
