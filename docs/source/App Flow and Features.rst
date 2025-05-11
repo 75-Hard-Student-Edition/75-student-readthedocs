@@ -57,19 +57,19 @@ Users can:
 - Add tasks (e.g., evening walk, study) and assign a preferred time
 - Mark tasks as completed
 - Edit task details and time
-- View task history for past completion records
 - Delete tasks
+- View task history for past completion records
 
 6. Add Task View
 ----------------
 
 This view enables users to add tasks to their schedule. Users can set the following on this page:
 
-- **Start Time** – The start and end time for individual tasks
+- **Start Time** 
 - **Duration**
-- **Category**
-- **Repeat**
-- **Location** – GPS tracking to enable or disable task notifications
+- **Category** - Select from the six predefined categories
+- **Repeat** - "Once", "Daily", "Weekly", "fortnightly", or "Monthly"
+- **Location**
 - **Notes**
 - **Links**
 
@@ -80,6 +80,7 @@ Accessible from the Calendar view, the **Profile** page displays personalized us
 
 - Shows earned badges based on user progress
 - Displays the difficulty level selected by the user
+- Displays the user's highest priority category
 
 8. Mindfulness Page
 -------------------
