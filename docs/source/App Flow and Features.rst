@@ -1,16 +1,12 @@
 App Flow and Features
 =====================
 
-.. note::
-
-   This page is currently in development. Please check back later for updates.
-
 This section walks through the user experience of the 75-student app and highlights its core features.
 
 1. Sign Up / Log In
 -------------------
 
-Users begin by either creating an account or logging in. This ensures that individual habits and progress are saved.
+Users begin by either creating an account or logging in. This ensures that individual tasks and progress are saved.
 
 **Sign Up** - The sign-up page requires user details such as full name, email, username, and password.
 
@@ -48,18 +44,21 @@ Users can navigate to the **Notifications** page, where they can manage their no
 
 - Enabling or disabling notifications
 - Selecting a preferred reminder time
+- Setting a bedtime
+- Setting the time for mindfulness exercises
 
 5. Calendar View
 ----------------
 
-This view displays each habit as a time-based block in a daily timeline layout, aligned with the preferred time the habit is meant to be completed.
+This view displays each task as a time-based block in a daily timeline layout, aligned with the preferred time the task is meant to be completed.
 
 Users can:
 
-- Add habits (e.g., evening walk, study) and assign a preferred time
-- Mark habits as completed
-- Edit habit details and time
-- View habit history for past completion records
+- Add tasks (e.g., evening walk, study) and assign a preferred time
+- Mark tasks as completed
+- Edit task details and time
+- View task history for past completion records
+- Delete tasks
 
 6. Add Task View
 ----------------
