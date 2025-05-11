@@ -1,113 +1,96 @@
 App Flow and Features
 =====================
-.. note:: This page is currently in development. Please check back later for updates.
 
-This section works through the user experience of the 75-student app as well highlights its core fatures.
+.. note::
 
-## 1. Sign Up / Log In 
------------------------
+   This page is currently in development. Please check back later for updates.
 
-Users begin by either creating an account or loggin in. This ensures that individual habits and progress are saved.
+This section walks through the user experience of the 75-student app and highlights its core features.
 
-Sign up - The sign up page requires user details such as fullname, email, username and password.
+1. Sign Up / Log In
+-------------------
 
-Log in - Once the user have successfully signed up, the user can login using their username/email and password.
+Users begin by either creating an account or logging in. This ensures that individual habits and progress are saved.
 
-## 2. Select Diffculty
------------------------
+**Sign Up** - The sign-up page requires user details such as full name, email, username, and password.
 
-Once successfully signed in, the user can choose between three diffculty levels.
+**Log In** - Once users have successfully signed up, they can log in using their username/email and password.
 
-- easy, 
+2. Select Difficulty
+--------------------
 
-- medium, 
+Once signed in, users can choose between three difficulty levels:
 
-- hard.
+- Easy
+- Medium
+- Hard
 
-## 3. Order categories
------------------------
+3. Order Categories
+-------------------
 
 Users can prioritize their focus areas by ranking six predefined categories in order of significance.
 
 **Available Categories:**
 
 - Chores
-
 - Academic
-
 - Hobby
-
 - Social
-
 - Health
-
 - Employment
 
-This is done using an inbult flutter drag and drop widget.
+This is done using an inbuilt Flutter drag-and-drop widget.
 
-## 4. Notifcations 
-------------------
+4. Notifications
+----------------
 
-Users can navigate to the Notifications page, where they can manage their notification settings, 
-including enabling or disabling notifications and selecting a preferred reminder time.
+Users can navigate to the **Notifications** page, where they can manage their notification settings, including:
 
-## 5. Calendar View
----------------------
+- Enabling or disabling notifications
+- Selecting a preferred reminder time
+
+5. Calendar View
+----------------
 
 This view displays each habit as a time-based block in a daily timeline layout, aligned with the preferred time the habit is meant to be completed.
 
-Users can add habits (e.g., evening walk, study) and assign a preferred time for each.
-
 Users can:
 
-Mark habits as completed.
+- Add habits (e.g., evening walk, study) and assign a preferred time
+- Mark habits as completed
+- Edit habit details and time
+- View habit history for past completion records
 
-Edit habit details and time.
+6. Add Task View
+----------------
 
-View habit history for past completion records.
+This view enables users to add tasks to their schedule. Users can set the following on this page:
 
-## 6. Add Task View
+- **Start Time** – The start and end time for individual tasks
+- **Duration**
+- **Category**
+- **Repeat**
+- **Location** – GPS tracking to enable or disable task notifications
+- **Notes**
+- **Links**
+
+7. My Profile View
+------------------
+
+Accessible from the Calendar view, the **Profile** page displays personalized user data:
+
+- Shows earned badges based on user progress
+- Displays the difficulty level selected by the user
+
+8. Mindfulness Page
 -------------------
 
-This view enables users to add task to their schedule. Users set the following on this page.
-
-- Start Time - The start and end time for individual task.
-
-- Duration
-
-- category
-
-- repeat
-
-- location - GPS tracking to enable or disable task Notifcations
-
-- Notes 
-
-- Links
-
-
-## 7. My Profile View
-----------------------
-
-Accessible from the Calendar view, the Profile page displays personalized user data:
-
-Shows earned badges based on user progress.
-
-Displays the difficulty level selected by the user.
-
-
-## 8. Mindfulness Page
-----------------------
-
-Users can access the Mindfulness page to practice guided breathing exercises.
+Users can access the **Mindfulness** page to practice guided breathing exercises.
 
 Features a timer widget with controls:
 
 - Start
-
 - Stop
-
 - Restart
 
 Designed to help users engage in short mindful breaks during their routine.
-
