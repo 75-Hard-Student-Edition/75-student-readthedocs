@@ -29,6 +29,7 @@ Caught exceptions should be handled quietly, without crashing the app.
     }
 
 **Example:**
+
 .. code-block:: dart
 
     onPressed: () async {
