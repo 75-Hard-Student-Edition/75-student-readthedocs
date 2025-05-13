@@ -49,7 +49,9 @@ Users can prioritize their focus areas by ranking six predefined categories in o
 
 This is done using an inbult flutter drag and drop widget.
 
-## 4. Notifcations 
+****************
+4. Notifications
+****************
 
 Users can navigate to the **Notifications** page, where they can manage their notification settings, including:
 
