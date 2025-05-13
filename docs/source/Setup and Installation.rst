@@ -31,5 +31,7 @@ Alternatively, some IDEs have flutter support, and so can run the app from the G
 On a non-iOS device, the app will load correctly, but will crash at a certain point through the app flow,
 because of differences in the implementation of its dependencies across platforms.
 
+TODO ask widad how you run the app
+
 .. _github repository: https://github.com/75-Hard-Student-Edition/75-Student
 .. _flutter: https://flutter.dev/ 

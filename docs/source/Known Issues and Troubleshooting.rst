@@ -29,5 +29,7 @@ there is no mechanism in place to detect a change of day
 
 8. Sensitive data (i.e. passwords) is unencrypted. 
 
+TODO get some feedback on this from charlie and widad
+
 TODO elaborate on "Troubleshooting" part
 
