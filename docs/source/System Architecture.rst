@@ -17,7 +17,6 @@ Each screen is comprised of between 1 and 3 objects, depending on the nature of 
 Screens which do not store state are comprised primarily of 1 object,
 which extends the ``StatelessWidget`` class. 
 Such screens include:
-
 - ``ProfileScreen`` in ``profile.dart``
 
 - ``SettingsPage`` in ``settings_page.dart``
@@ -31,7 +30,6 @@ Screens which store state are primarily comprised of 2 objects.
 The first extends the ``StatefulWidget`` class, and the second extends the ``State<ScreenName>`` class 
 (where ``ScreenName`` is the name of that screen's first object.) 
 Such screens include:
-
 - ``AddTaskScreen`` in ``add_task.dart``
 
 - ``CategoryRankingScreen`` in ``category_ranking.dart``
@@ -57,7 +55,6 @@ Business Logic Layer
 ********************
 The business logic is primarily handled by several **managers**.
 These include:
-
 - ``AccountManager``
 
 - ``ScheduleManager``
