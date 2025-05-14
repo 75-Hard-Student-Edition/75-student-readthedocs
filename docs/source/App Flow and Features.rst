@@ -1,5 +1,3 @@
-.. _App Flow and Features:
-
 App Flow and Features
 =====================
 
