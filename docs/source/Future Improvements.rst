@@ -1,6 +1,5 @@
 Future Improvements 
 ===================
-.. note:: This page is currently under development. Please check back later for updates.
 
 This is a list of future improvements which we believe should take priority
 if development of the app should continue. These improvements have been derived 
