@@ -5,14 +5,12 @@ Overview
 --------
 
 The state management in this application is primarily manual and service-based, utilizing Dart classes and ``setState()`` within Flutter widgets where needed.
-
 The app avoids using external state management libraries such as Provider, Riverpod, or Bloc in favor of a more lightweight and understandable architecture suited to the app's current complexity.
 
 AccountManager
 --------------
 
 The ``AccountManager`` class is responsible for managing the user account state, interacting with the database, and handling user-related information.
-
 It maintains a single piece of mutable state:
 
 - ``UserAccountModel? userAccount`` — Holds the current user's account data or ``null`` if not signed in.
@@ -29,7 +27,6 @@ PointsManager
 -------------
 
 The ``PointsManager`` handles internal state for user progress, including total points, completed points, and pass thresholds based on difficulty.
-
 All state—such as ``maxPoints``, ``currentPoints``, ``pointsToPass`` and ``completedTasks``—is self-contained and updated through methods like:
 
 - ``addTask(...)``
@@ -45,7 +42,6 @@ The ``ScheduleManager`` class relies on manual, internal state management via cl
 It manages the schedule of tasks, including task creation, deletion, and modification.  
 It maintains a ``Schedule`` object, which is a list of ``TaskModel`` objects, and exposes methods to manipulate this schedule.  
 It's important to note that internally, whenever a ``TaskModel`` is modified, a new object with the modified values is created and the old one is replaced in the ``Schedule`` to avoid mutation.  
-
 It exposes and mutates state via method calls such as:
 
 - ``addTask(...)``
