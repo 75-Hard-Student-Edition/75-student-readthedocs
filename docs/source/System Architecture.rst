@@ -67,8 +67,8 @@ These include:
 
 - ``PointsManager``. 
 
-These managers expose interfaces to the presentation and database layers to use, 
-allowing them to manipulate the internal state of the app, 
+These managers expose interfaces to the presentation layer to use, 
+allowing it to manipulate the internal state of the app, 
 as well as the persistent data in the database.
 This approach simplifies development and testing as it provides a consistent API to be used by the presentation layer.
 
