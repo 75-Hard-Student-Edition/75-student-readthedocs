@@ -1,6 +1,5 @@
 Known Issues and Troubleshooting
 ================================
-.. note:: This page is currently under development. Please check back later for updates.
 
 See also :doc:`Future Improvements` for a list of features that have not yet been implemented.
 
@@ -25,6 +24,4 @@ Known Issues
 8. Sensitive data (i.e. passwords) are unencrypted. 
 
 9. ``ScheduleManager`` CRUD methods do not await the ``DatabaseService`` methods that they call - results in broken unit tests
-
-TODO elaborate on "Troubleshooting" part
 
