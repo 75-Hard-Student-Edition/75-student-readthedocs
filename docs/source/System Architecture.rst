@@ -111,7 +111,8 @@ At this stage in the development, the database is less complex than was initiall
 because some features have yet to be implemented. 
 As such it consists of only two tables:
 
-.. code-block:: SQL
+.. code-block:: SQLite
+
     CREATE TABLE IF NOT EXISTS "user" (
         user_id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT NOT NULL,                 
