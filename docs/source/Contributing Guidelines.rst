@@ -1,6 +1,5 @@
 Contributing Guidelines
 =======================
-.. note:: This page is currently under development. Please check back later for updates.
 
 First we would like to thank our main contributors:
 
