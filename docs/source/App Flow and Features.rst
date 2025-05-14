@@ -17,13 +17,7 @@ Users begin by either creating an account or logging in. This ensures that indiv
 2. Select Difficulty
 ********************
 
-Once signed in, users can choose between three difficulty levels:
-
-- Easy
-
-- Medium
-
-- Hard
+Once signed in, users can choose between three difficulty levels, Easy, Medium, and Hard.
 
 *******************
 3. Order categories
@@ -110,13 +104,5 @@ Accessible from the Calendar view, the **Profile** page displays personalized us
 *******************
 
 Users can access the **Mindfulness** page to practice guided breathing exercises.
-
-Features a timer widget with controls:
-
-- Start
-
-- Stop
-
-- Restart
-
 Designed to help users engage in short mindful breaks during their routine.
+This features a timer widget with options to Start, Stop, and Restart.
