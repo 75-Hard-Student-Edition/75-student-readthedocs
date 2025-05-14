@@ -72,7 +72,8 @@ allowing them to manipulate the internal state of the app,
 as well as the persistent data in the database.
 This approach simplifies development and testing as it provides a consistent API to be used by the presentation layer.
 
-A more detailed breakdown on how each of the managers works is provided in the :doc:`State Management` section, however here is an example of the ScheduleManager interface:
+A more detailed breakdown on how each of the managers works is provided in the :doc:`State Management` section, 
+however here is an example of the ScheduleManager interface:
 
 .. code-block:: dart
 
@@ -100,6 +101,7 @@ A more detailed breakdown on how each of the managers works is provided in the :
 **************
 Database Layer
 **************
+
 This code (found in ``lib/database``) deals with the storage, retrieval and updating of data in the database. 
 It implements several methods which may be called by the business logic layer. 
 TODO expand what methods exactly. Also for other layers expand what methods exactly.
@@ -112,7 +114,6 @@ because some features have yet to be implemented.
 As such it consists of only two tables:
 
 .. code-block:: SQL
-
 
     CREATE TABLE IF NOT EXISTS "user" (
         user_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -142,6 +143,11 @@ As such it consists of only two tables:
         duration_minutes INT NOT NULL, 
         repeat_period TEXT, 
         links TEXT
-    );
+    )
+
+SQLite is a simple DBMS. One of its limitations arising from this is a lack of datatypes. 
+This means that when data is inserted into the database it needs to be encoded somehow
+into one of SQLite's existing datatypes (namely, ``Text``). 
+Also that these text representations need to be decoded when data is retrieved from the database.
 
 .. _SQLite: https://www.sqlite.org/ 
