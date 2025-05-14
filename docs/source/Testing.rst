@@ -15,18 +15,18 @@ Running the whole test suite will require running the above command for the each
 test file. 
 
 Alternatively, depending on your IDE, their may be a graphical way to run the tests. 
-In VSCode, the development environment of choice for our development team, this appears as a 
-green "play" button next to each test (to execute that test)
-or a similar icon next to the test group to execute the entire group.
+In VSCode, the development environment of choice for our team, this appears as a 
+green "play" button next to each test (to run that test)
+or a similar icon next to the test group (to run the entire group).
 
 **************
 System Testing
 **************
 
 During development thus far, manual system testing has also been used to test
-compliance with the system requirements (or identify those areas in which the system fails). 
+compliance with the system requirements (including identifying those areas in which the system fails). 
 This testing has identified a number of issues with the system, which can be found on 
-the :ref:`known issues` page.
+the :doc:`Known Issues and Troubleshooting` page.
 
 There are no manual test cases.
 
