@@ -102,12 +102,19 @@ however here is an example of the ScheduleManager interface:
 Database Layer
 **************
 
-This code (found in ``lib/database``) deals with the storage, retrieval and updating of data in the database. 
-It implements several methods which may be called by the business logic layer. 
-TODO expand what methods exactly. Also for other layers expand what methods exactly.
+This code creates a database and implements CRUD operations for it,
+providing an interface for those CRUD operations such that they can be used by the logic layer.
 
-The database is implemented using `SQLite`_ and the flutter package for handling SQLite, ``sqflite``. 
-Another package, ``sqflite_darwin`` is needed to ensure compatibility with iOS systems.
+The database is implemented using `SQLite`_, a pared-down database engine,
+and `sqflite`_, the flutter package which creates an interface between flutter and SQLite.
+Another package, `sqflite_darwin`_ is needed to ensure compatibility with iOS systems.
+
+The SQLite code for creating the tables (seen below) is contained in ``assets/create_tables.sql``,
+and the flutter interface (implemented using sqflite) is found in ``lib/database``. 
+SQLite stores a database as a single file (in our case ``75_student_db.db``) locally on the user's machine, 
+with the directory being dependent on the platform. 
+See `this sqflite documentation page <https://github.com/tekartik/sqflite/blob/master/sqflite/doc/opening_db.md#finding-a-location-path-for-the-database>`_ 
+for details.
 
 At this stage in the development, the database is less complex than was initially planned,
 because some features have yet to be implemented. 
@@ -145,9 +152,11 @@ As such it consists of only two tables:
         links TEXT
     )
 
-SQLite is a simple DBMS. One of its limitations arising from this is a lack of datatypes. 
-This means that when data is inserted into the database it needs to be encoded somehow
-into one of SQLite's existing datatypes (namely, ``Text``). 
-Also that these text representations need to be decoded when data is retrieved from the database.
+One of the difficulties of using SQLite is handling its lack of datatypes. 
+This means that when data is inserted/retrieved from the database it needs to be serialised/deserialised
+from a dart-datatype to an SQLite-compatible-type (particularly, ``TEXT``).
+This functionality is provided by an extension on the ``TaskModel`` and ``UserAccountModel``.
 
 .. _SQLite: https://www.sqlite.org/ 
+.. _sqflite: https://pub.dev/packages/sqflite
+.. _sqflite_darwin: https://pub.dev/packages/sqflite_darwin
