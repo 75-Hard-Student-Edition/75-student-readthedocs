@@ -4,6 +4,8 @@ Known Issues and Troubleshooting
 ================================
 .. note:: This page is currently under development. Please check back later for updates.
 
+See also :doc:`Future Improvements` for a list of features that have not yet been implemented.
+
 ************
 Known Issues
 ************
