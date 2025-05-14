@@ -156,6 +156,48 @@ One of the difficulties of using SQLite is handling its lack of datatypes.
 This means that when data is inserted/retrieved from the database it needs to be serialised/deserialised
 from a dart-datatype to an SQLite-compatible-type (particularly, ``TEXT``).
 This functionality is provided by an extension on the ``TaskModel`` and ``UserAccountModel``.
+The extension on ``TaskModel`` is included below for reference.
+
+.. code-block:: dart
+
+    extension TaskModelDB on TaskModel {
+    Map<String, dynamic> toMap(int userId) {
+        return {
+        "task_id": id,
+        "user_id": userId,
+        "title": name,
+        "description": description,
+        "is_moveable": isMovable ? 1 : 0,
+        "is_complete": isComplete ? 1 : 0,
+        "category": TaskCategory.values.indexOf(category),
+        "priority": TaskPriority.values.indexOf(priority),
+        "start_time": startTime.toIso8601String(),
+        "duration_minutes": duration.inMinutes,
+        "repeat_period": period?.inDays.toString() ?? "",
+        "links": links ?? ""
+        };
+    }
+
+    static TaskModel fromMap(Map<String, dynamic> map) {
+        print("TaskModelDB.fromMap: ${map.toString()}");
+        final ret = TaskModel(
+            id: map["task_id"],
+            name: map["title"],
+            description: map["description"],
+            isMovable: map["is_moveable"] == 1,
+            isComplete: map["is_complete"] == 1,
+            category: TaskCategory.values[map["category"]],
+            priority: TaskPriority.values[map["priority"]],
+            startTime: DateTime.parse(map["start_time"]),
+            duration: Duration(minutes: map["duration_minutes"]),
+            period: (map["repeat_period"] != null && map["repeat_period"].toString().isNotEmpty)
+                ? Duration(days: int.parse(map["repeat_period"].toString()))
+                : null,
+            links: map["links"]);
+        print("TaskModelDB.fromMap: ${ret.toString()}");
+        return ret;
+    }
+    }
 
 .. _SQLite: https://www.sqlite.org/ 
 .. _sqflite: https://pub.dev/packages/sqflite
