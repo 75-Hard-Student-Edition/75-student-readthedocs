@@ -113,6 +113,7 @@ As such it consists of only two tables:
 
 .. code-block:: SQL
 
+
     CREATE TABLE IF NOT EXISTS "user" (
         user_id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT NOT NULL,                 
