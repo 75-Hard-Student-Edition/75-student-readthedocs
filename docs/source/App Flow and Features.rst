@@ -17,15 +17,14 @@ Users begin by either creating an account or logging in. This ensures that indiv
 2. Select Difficulty
 ********************
 
-Once signed in, users can choose between three difficulty levels, Easy, Medium, and Hard.
+Once signed in, users can choose between three difficulty levels: Easy, Medium, and Hard.
 
 *******************
 3. Order categories
 *******************
 
 Users can prioritize their focus areas by ranking six predefined categories in order of significance.
-
-**Available Categories:**
+**Available Categories** are:
 
 - Chores
 
@@ -60,7 +59,6 @@ Users can navigate to the **Notifications** page, where they can manage their no
 ****************
 
 This view displays each task as a time-based block in a daily timeline layout, aligned with the preferred time the task is meant to be completed.
-
 Users can:
 
 - Add tasks (e.g., evening walk, study) and assign a preferred time
