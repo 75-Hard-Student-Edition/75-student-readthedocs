@@ -2,7 +2,6 @@ System Architecture
 ===================
 
 The app has a 3-layer architecture. (Presentation Layer, Business Logic Layer, Database Layer)
-
 ******************
 Presentation Layer
 ******************
@@ -10,10 +9,9 @@ This code deals with displaying the GUI and handling user input.
 Where the user actions may require some kind of data processing, 
 the code in this layer will call methods implemented by the business logic layer.
 
-The GUI is comprised of a collection of "screens" (occasionally "page" is used synomously). 
+The GUI is comprised of a collection of "screens" (occasionally "page" is used synonymously). 
 The code for each screen is written in its own file in ``lib/userInterfaces``. 
 Each screen is comprised of between 1 and 3 objects, depending on the nature of the screen. 
-
 Screens which do not store state are comprised primarily of 1 object,
 which extends the ``StatelessWidget`` class. 
 Such screens include:
@@ -44,7 +42,7 @@ Such screens include:
 
 - ``SignUpScreen`` in ``sign_up.dart``
 
--  ``LoginScreen`` in ``login.dart``
+- ``LoginScreen`` in ``login.dart``
 
 Some screens also have an additional object to implement a navigation bar (NavBar).
 
@@ -102,6 +100,42 @@ This code (found in ``lib/database``) deals with the storage, retrieval and upda
 It implements several methods which may be called by the business logic layer. 
 TODO expand what methods exactly. Also for other layers expand what methods exactly.
 
-The database is implemented using SQLite and the flutter package for handling SQLite, ``sqflite``. 
+The database is implemented using `SQLite`_ and the flutter package for handling SQLite, ``sqflite``. 
 Another package, ``sqflite_darwin`` is needed to ensure compatibility with iOS systems.
 
+At this stage in the development, the database is less complex than was initially planned,
+because some features have yet to be implemented. 
+As such it consists of only two tables:
+
+.. code-block:: SQLite
+    CREATE TABLE IF NOT EXISTS "user" (
+        user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT NOT NULL,                 
+        email TEXT UNIQUE,            
+        phone_number TEXT UNIQUE,
+        password TEXT,              
+        streak INT DEFAULT 0,
+        difficulty INTEGER NOT NULL,
+        category_order TEXT NOT NULL,
+        sleep_duration_minutes INT NOT NULL,
+        bedtime TEXT NOT NULL,
+        notify_time_minutes INT NOT NULL,
+        mindfulness_minutes INT NOT NULL            
+    );
+
+    CREATE TABLE IF NOT EXISTS "task" (
+        task_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER REFERENCES "user"(user_id) ON DELETE CASCADE,
+        title TEXT NOT NULL, 
+        description TEXT NOT NULL, 
+        is_moveable INTEGER DEFAULT 0, -- SQLite doesn't have a boolean type
+        is_complete INTEGER DEFAULT 0, 
+        category INTEGER NOT NULL,
+        priority INTEGER NOT NULL,
+        start_time TEXT NOT NULL,
+        duration_minutes INT NOT NULL, 
+        repeat_period TEXT, 
+        links TEXT
+    );
+
+.. _SQLite: https://www.sqlite.org/ 
